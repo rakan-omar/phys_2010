@@ -13,5 +13,6 @@ the current results show that the centre of mass is always close or approximatel
 large forces) but not necessarily exactly the same.
 BTW, these results also hold if we move the explosion to before the appex
 
+I heavily recommend playing around with the inital speed, initial bomb mass, and explosion force (range).
 
-if you can't see the graph because of the labels, comment out the last "legend" line 
+if you can't see the graph because of the labels, comment out the last "legend" line
