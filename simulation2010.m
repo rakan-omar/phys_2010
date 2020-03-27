@@ -3,9 +3,9 @@
 % explodes to multiple pieces when it reaches its maximum height.
 clear ; clc; % delete the previous programs and move forward
 %% Setting up paremters
-M = 20; % the mass in kg
+M = 100; % the mass in kg
 theta = pi/3; % the angle that the bomb starts at in deg
-speed = 100; % the initial speed of the bomb in m/s
+speed = 200; % the initial speed of the bomb in m/s
 x_speed = speed*cos(theta) ; % x component of the speed
 y_speed = speed*sin(theta) ; % y component of the speed
 v = [x_speed, y_speed];
@@ -72,7 +72,7 @@ fragment_masses(n_fragments) = remaining_mass;
 %the angle for each sector is given by
 fragment_angles = 2*pi*fragment_masses/M;
 %randomising a starting point, relative to the horizontal
-explosion_force = 400 + (rand*200); %newtons
+explosion_force = 2000 + (rand*1000); %newtons
 impulse = explosion_force*explosion_impulse_time;
 x_speed_fragments = zeros(1, n_fragments);
 y_speed_fragments = zeros(1, n_fragments);
