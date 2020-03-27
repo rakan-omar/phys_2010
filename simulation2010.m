@@ -135,7 +135,7 @@ end
 
 %plotting the trajectory of the peices
 for i=1:n_fragments
-    plot(fragment_x_positions(i, :),fragment_y_positions(i, :),'k-','LineWidth',0.8);
+    plot(fragment_x_positions(i, :),fragment_y_positions(i, :),'LineWidth',0.8);
     grid on
     hold on
 end
@@ -151,3 +151,15 @@ end
 centre_of_mass = centre_of_mass/M;
 
 plot(centre_of_mass(1, :),centre_of_mass(2, :),'b-', 'lineWidth', 2) % plotting the centre of mass trajectory
+f_names = strings(1, 3 + n_fragments);
+f_names(1) = 'bomb';
+f_names(2) = 'expected trajectory';
+for i=3:2+n_fragments;
+    f_names(i) = 'fragment ' + string(i-2);
+end
+f_names(n_fragments+3) = 'centre of mass';
+legend(f_names) %remove this to view graph clearly
+
+
+
+
