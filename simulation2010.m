@@ -4,11 +4,8 @@
 clear ; clc; % delete the previous programs and move forward
 %% Setting up paremters
 M = 20; % the mass in kg
-BOMB_RADIUS = 0.25; %in meters
-Bomb_area = pi*BOMB_RADIUS^2; %2 dimensinal
-density = M/Bomb_area; % mass per unit area
 theta = pi/3; % the angle that the bomb starts at in deg
-speed = 50; % the initial speed of the bomb in m/s
+speed = 100; % the initial speed of the bomb in m/s
 x_speed = speed*cos(theta) ; % x component of the speed
 y_speed = speed*sin(theta) ; % y component of the speed
 v = [x_speed, y_speed];
@@ -19,7 +16,8 @@ x_at_peak = x_speed*time_at_peak;
 
 %range of explosion is between half-way and three-quarters through
 %doing this here because we need speed and position right before explosion
-explosion_time = time_at_peak + rand*time_at_peak*0.5;
+% explosion_time = time_at_peak + rand*time_at_peak*0.5;
+explosion_time = time_at_peak*0.5 +rand*time_at_peak;
 velocity_pre_explosion = [x_speed,0];
 explosion_position = [0, 0];
 %% the trajectory of the bomb
@@ -159,7 +157,3 @@ for i=3:2+n_fragments;
 end
 f_names(n_fragments+3) = 'centre of mass';
 legend(f_names) %remove this to view graph clearly
-
-
-
-
