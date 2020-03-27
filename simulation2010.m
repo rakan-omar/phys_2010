@@ -1,6 +1,6 @@
 %% This program simulates and calculates the centre of mass of a bomb following a projectile motion
 % In this program it is assumed that the bomb starts at on piece and then
-% explodes to multiple pieces when it reaches its maximum height.
+% explo
 clear ; clc; % delete the previous programs and move forward
 %% Setting up paremters
 M = 100; % the mass in kg
@@ -14,7 +14,7 @@ y_at_peak = y_speed^2/(2*g);
 time_at_peak = y_speed/g;
 x_at_peak = x_speed*time_at_peak;
 
-%range of explosion is between half-way and three-quarters through
+%range of explosion is between quarter and three-quarters through
 %doing this here because we need speed and position right before explosion
 % explosion_time = time_at_peak + rand*time_at_peak*0.5;
 explosion_time = time_at_peak*0.5 +rand*time_at_peak;
@@ -127,9 +127,6 @@ while (midair)
         end
     end
 end
-
-% fragment_x_positions
-% fragment_y_positions
 
 %plotting the trajectory of the peices
 for i=1:n_fragments
