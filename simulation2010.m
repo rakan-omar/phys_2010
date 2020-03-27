@@ -1,7 +1,7 @@
 %% This program simulates and calculates the centre of mass of a bomb following a projectile motion
 % In this program it is assumed that the bomb starts at on piece and then
-% explo
-clear ; clc; % delete the previous programs and move forward
+% explodes into multiple fragments
+clear ; clc; %clear previous program
 %% Setting up paremters
 M = 100; % the mass in kg
 theta = pi/3; % the angle that the bomb starts at in deg
