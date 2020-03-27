@@ -72,7 +72,7 @@ fragment_masses(n_fragments) = remaining_mass;
 %the angle for each sector is given by
 fragment_angles = 2*pi*fragment_masses/M;
 %randomising a starting point, relative to the horizontal
-explosion_force = 2000 + (rand*1000); %newtons
+explosion_force = 3000 + (rand*1500); %newtons
 impulse = explosion_force*explosion_impulse_time;
 x_speed_fragments = zeros(1, n_fragments);
 y_speed_fragments = zeros(1, n_fragments);
@@ -152,7 +152,7 @@ plot(centre_of_mass(1, :),centre_of_mass(2, :),'b-', 'lineWidth', 2) % plotting 
 f_names = strings(1, 3 + n_fragments);
 f_names(1) = 'bomb';
 f_names(2) = 'expected trajectory';
-for i=3:2+n_fragments;
+for i=3:2+n_fragments
     f_names(i) = 'fragment ' + string(i-2);
 end
 f_names(n_fragments+3) = 'centre of mass';
