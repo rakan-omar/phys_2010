@@ -57,7 +57,7 @@ hold on
 %part 2
 %randomise some aspects of explosion
 explosion_impulse_time = 0.1;
-n_fragments = 4 + ceil(3*rand);
+n_fragments = 2;
 fragment_masses = zeros(1, n_fragments);
 remaining_mass = M;
 for i=1:n_fragments-1
@@ -72,7 +72,7 @@ fragment_masses(n_fragments) = remaining_mass;
 %the angle for each sector is given by
 fragment_angles = 2*pi*fragment_masses/M;
 %randomising a starting point, relative to the horizontal
-explosion_force = 6000 + (rand*3000); %newtons
+explosion_force = 10000 + (rand*5000); %newtons
 impulse = explosion_force*explosion_impulse_time;
 x_speed_fragments = zeros(1, n_fragments);
 y_speed_fragments = zeros(1, n_fragments);
